@@ -1,0 +1,33 @@
+SIte Ecommerce pokemon
+
+API Pokemon
+☐ définir permettant de donner un prix à une carte en fonction de ses caractéristiques (la pertinence
+de la formule ne sera évidemment pas évalué
+
+☐ Pierre souhaite consulter la liste des cartes Pokémon disponibles sur le site de vente afin de
+rechercher celles qui l'intéressent le plus.
+
+☐ Pierre souhaite pouvoir ajouter et retirer des cartes de son panier. Il souhaite pouvoir
+acheter plusieurs exemplaires de la même carte pour ensuite les échanger avec ses amis
+collectionneurs.
+
+☐ Pierre souhaite pouvoir visualiser le montant de son panier et le nombre de cartes qu'il
+contient tout au long de sa navigation pour l'aider à respecter le budget qu'il s'est fixé.
+
+☐ Pierre souhaite pouvoir afficher le détail du panier avant de valider sa commande pour
+s'assurer qu'il n'a pas commis d'erreur dans sa sélection.
+
+☐ tests unitaires
+
+☐ redux
+
+Composants
+☐ carte
+☐ datatable
+
+
+Pages
+☐ panier
+☐ catalogue
+☐ quantity
+
