@@ -13,7 +13,7 @@ describe("fetchPokemons thunk", () => {
       },
     })
 
-    const test = await store.dispatch(fetchPokemons({params: { limit: 10, offset: 0, query: "" }}))
+    const test = await store.dispatch(fetchPokemons({params: { limit: 10, offset: 0, search: "" }}))
     console.log(test)
     // expect(store.getActions()).toEqual(expectedActions)
   })

@@ -6,7 +6,7 @@ import { AppDispatch } from "../app/store"
 import { useEffect, useState } from "react"
 import { useNavigate } from "react-router-dom"
 
-const CartList = () => {
+const CartList = ({ pay = false }: { pay: boolean }) => {
   const styles = {
     stack: {
       padding: "20px",
@@ -45,8 +45,8 @@ const CartList = () => {
         marginBottom: "20px",
       },
       button: {
-        backgroundColor: "#ea0011"
-      }
+        backgroundColor: "#ea0011",
+      },
     },
   }
   const dispatch = useDispatch<AppDispatch>()
@@ -68,7 +68,7 @@ const CartList = () => {
   }, [data])
 
   const navigateToDetail = () => {
-    navigate("/detail");
+    navigate("/detail")
   }
 
   return (
@@ -97,7 +97,13 @@ const CartList = () => {
           <div>Total: {total} $</div>
           <div>Cartes: {data.length}</div>
         </div>
-        <Button style={styles.footer.button} variant="contained" onClick={navigateToDetail}>Checkout</Button>
+        <Button
+          style={styles.footer.button}
+          variant="contained"
+          onClick={navigateToDetail}
+        >
+          {pay ? 'Validate' : 'Checkout'}
+        </Button>
       </div>
     </Stack>
   )
