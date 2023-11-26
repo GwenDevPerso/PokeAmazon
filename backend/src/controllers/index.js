@@ -7,12 +7,12 @@ async function getAll(req, res) {
       const cards = await pokemon.card.where({
         pageSize: limit,
         page: offset,
-        q: `set.name:${search}`,
+        q: `name:${search}`,
       });
+      
       res.status(200).send({ data: cards.data });
       return;
     }
-
     const cards = await pokemon.card.where({ pageSize: limit, page: offset });
     res.status(200).send({ data: cards.data });
   } catch (error) {

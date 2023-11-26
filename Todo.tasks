@@ -1,33 +1,34 @@
 SIte Ecommerce pokemon
 
 API Pokemon
-☐ définir permettant de donner un prix à une carte en fonction de ses caractéristiques (la pertinence
-de la formule ne sera évidemment pas évalué
+✔ définir permettant de donner un prix à une carte en fonction de ses caractéristiques (la pertinence @done (23/11/2023 21:18:08)
 
-☐ Pierre souhaite consulter la liste des cartes Pokémon disponibles sur le site de vente afin de
-rechercher celles qui l'intéressent le plus.
+✔ prix @done (23/11/2023 21:18:28)
 
-☐ Pierre souhaite pouvoir ajouter et retirer des cartes de son panier. Il souhaite pouvoir
+✔ Pierre souhaite consulter la liste des cartes Pokémon disponibles sur le site de vente afin de @done (23/11/2023 21:18:43)
+☐ rechercher
+
+✔ Pierre souhaite pouvoir ajouter et retirer des cartes de son panier. Il souhaite pouvoir @done (23/11/2023 21:18:55)
 acheter plusieurs exemplaires de la même carte pour ensuite les échanger avec ses amis
 collectionneurs.
 
-☐ Pierre souhaite pouvoir visualiser le montant de son panier et le nombre de cartes qu'il
+✔ Pierre souhaite pouvoir visualiser le montant de son panier et le nombre de cartes qu'il @done (23/11/2023 21:19:00)
 contient tout au long de sa navigation pour l'aider à respecter le budget qu'il s'est fixé.
 
-☐ Pierre souhaite pouvoir afficher le détail du panier avant de valider sa commande pour
+✔ Pierre souhaite pouvoir afficher le détail du panier avant de valider sa commande pour @done (23/11/2023 21:19:04)
 s'assurer qu'il n'a pas commis d'erreur dans sa sélection.
 
 ☐ tests unitaires
 
-☐ redux
+✔ redux @done (23/11/2023 21:19:08)
 
 Composants
-☐ carte
-☐ datatable
+✔ carte @done (23/11/2023 21:19:09)
+✔ datatable @done (23/11/2023 21:19:12)
 
 
 Pages
-☐ panier
-☐ catalogue
-☐ quantity
+✔ panier @done (23/11/2023 21:19:14)
+✔ catalogue @done (23/11/2023 21:19:17)
+✔ quantity @done (23/11/2023 21:19:18)
 

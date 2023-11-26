@@ -54,8 +54,7 @@ function ResponsiveAppBar() {
   }
 
   const handleNavigation = (page: any) => () => {
-    console.log("page: ", page)
-    navigate(page.url);
+    navigate(page.url)
   }
 
   return (
@@ -102,6 +101,7 @@ function ResponsiveAppBar() {
           <AdbIcon sx={{ display: { xs: "flex", md: "none" }, mr: 1 }} />
           <Typography
             variant="h5"
+            data-testid="logo"
             noWrap
             component="a"
             href="#app-bar-with-responsive-menu"
@@ -119,8 +119,9 @@ function ResponsiveAppBar() {
             LOGO
           </Typography>
           <Box sx={{ flexGrow: 1, display: { xs: "none", md: "flex" } }}>
-            {pages.map((page) => (
+            {pages.map((page, index) => (
               <Button
+                data-testid={"navigate-button-" + index}
                 key={page.label}
                 onClick={handleNavigation(page)}
                 sx={{ my: 2, color: "white", display: "block" }}

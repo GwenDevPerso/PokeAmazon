@@ -36,9 +36,7 @@ export default function SearchBar({
   const [search, setSearch] = useState<string>("")
 
   useEffect(() => {
-    setTimeout(() => {
-      onInputChange(search)
-    }, 1000) // Déla
+    onInputChange(search)
   }, [search])
 
   return (
@@ -52,6 +50,7 @@ export default function SearchBar({
         <TextField
           style={style.input}
           id="search-bar"
+          data-testid="search-bar"
           label="Search pokemon..."
           color="error"
           variant="outlined"
@@ -65,12 +64,5 @@ export default function SearchBar({
         alt="pokeball"
       />
     </div>
-
-    // <input
-    //   type="text"
-    //   value={search}
-    //   onChange={(e) => setSearch(e.target.value)}
-    //   placeholder="Search pokemon..."
-    // />
   )
 }

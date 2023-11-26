@@ -11,7 +11,6 @@ const HomePage = () => {
 
   return (
     <Grid
-      // style={style.grid}
       container
       spacing={{ xs: 2, md: 4 }}
       columns={{ xs: 4, sm: 8, md: 12 }}

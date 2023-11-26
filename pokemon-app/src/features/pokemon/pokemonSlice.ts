@@ -24,15 +24,12 @@ const pokemonSlice = createSlice({
       state.pokemonsInCart.push(action.payload );
     },
     removePokemon: (state, action) => {
-      console.log("deletePokemon", action.payload)
       for (let i = 0; i < state.pokemonsInCart.length; i++) {
         if (state.pokemonsInCart[i].name === action.payload.name) {
           state.pokemonsInCart.splice(i, 1);
           break; // Sortez de la boucle après avoir supprimé le premier élément correspondant
         }
       }
-      // state.pokemonsInCart = state.pokemonsInCart.filter(item => item.name !== action.payload.name)
-      // state.pokemonsInCart.push(action.payload );
     },
   },
   extraReducers: (builder) => {
@@ -42,7 +39,6 @@ const pokemonSlice = createSlice({
       })
       .addCase(fetchPokemons.fulfilled, (state, action) => {
         state.loading = "succeeded"
-        console.log("action.payload")
         state.data = action.payload
       })
       .addCase(fetchPokemons.rejected, (state, action) => {

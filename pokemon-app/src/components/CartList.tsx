@@ -35,10 +35,10 @@ const CartList = () => {
     },
     footer: {
       display: "flex",
-      flexDirection: "column",
       justifyContent: "space-between",
       width: "100%",
       marginTop: "20px",
+      flexDirection: "column",
       counter: {
         display: "flex",
         justifyContent: "space-between",
@@ -82,6 +82,7 @@ const CartList = () => {
             {item.name} {item.cardmarket.prices.averageSellPrice} $
             <IconButton
               aria-label="delete"
+              data-testid={"remove-cart-" + item.name}
               onClick={() => removeFromCart(item)}
             >
               <DeleteIcon />
@@ -91,7 +92,7 @@ const CartList = () => {
       ) : (
         <> No items in cart</>
       )}
-      <div style={styles.footer}>
+      <div style={styles.footer as React.CSSProperties}>
         <div style={styles.footer.counter}>
           <div>Total: {total} $</div>
           <div>Cartes: {data.length}</div>

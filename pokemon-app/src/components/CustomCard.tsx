@@ -13,7 +13,6 @@ import AddShoppingCartIcon from "@mui/icons-material/AddShoppingCart"
 import DeleteIcon from "@mui/icons-material/Delete"
 
 const CustomCard = ({ data, add = false, remove = false }: { data: any; add?: boolean, remove?: boolean }) => {
-  console.log("CARD: ", data)
   const dispatch = useDispatch<AppDispatch>()
 
   const styles = {
@@ -64,17 +63,17 @@ const CustomCard = ({ data, add = false, remove = false }: { data: any; add?: bo
       </CardContent>
       <CardActions>
         {add ? (
-          <IconButton aria-label="add" onClick={() => addToCart()}>
+          <IconButton aria-label="add" id={'add-cart-' + data.name} onClick={() => addToCart()}>
             <AddShoppingCartIcon />
           </IconButton>
         ) : null}
         {remove ? (
-          <IconButton aria-label="remove" onClick={() => removeFromCart()}>
+          <IconButton aria-label="remove" id={'remove-cart-' + data.name} onClick={() => removeFromCart()}>
             <DeleteIcon />
           </IconButton>
         ) : null}
         <Button disabled size="small">
-          {data.cardmarket.prices.averageSellPrice}$
+          {data.cardmarket ? data.cardmarket.prices.averageSellPrice : '0'}$
         </Button>
       </CardActions>
     </Card>

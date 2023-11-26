@@ -10,8 +10,8 @@ const ViewGrid = ({ settings }: { settings: any }) => {
     containerGrid: {
       padding: "20px",
       display: "flex",
-      flexDirection: "column",
       justifyContent: "center",
+      flexDirection: "column",
     },
     grid: {
       display: "flex",
@@ -38,18 +38,17 @@ const ViewGrid = ({ settings }: { settings: any }) => {
   const error = useSelector((state: any) => state.pokemons.error)
 
   const onSearchUpdate = (search: string) => {
-    console.log("onSearchUpdate", search)
     setSearch(search)
     dispatch(settings.fetch({ limit: limit, offset: offset, search }))
   }
 
-  const handlePagination = (e: any) => {
-    console.log("handlePagination", e.target.innerText)
-    setOffset(e.target.innerText)
-  }
+ 
+  const handleChange = (event: React.ChangeEvent<unknown>, value: number) => {
+    setOffset(value)
+  };
 
   return (
-    <div style={styles.containerGrid}>
+    <div style={styles.containerGrid as React.CSSProperties}>
       <SearchBar onInputChange={onSearchUpdate} />
       <Grid
         style={styles.grid}
@@ -64,7 +63,7 @@ const ViewGrid = ({ settings }: { settings: any }) => {
             </Grid>
           ))}
       </Grid>
-      <Pagination style={styles.pagination} onChange={(e) => handlePagination(e)} count={10} />
+      <Pagination style={styles.pagination} page={offset} onChange={handleChange} count={500} />
     </div>
   )
 }
