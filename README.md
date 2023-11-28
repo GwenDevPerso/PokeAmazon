@@ -2,7 +2,14 @@
 
 
 <h2>Technos</h2>
+<h3>Api</h3>
 <p>
-  Api => Nodejs / Express / https://pokemontcg.io/
-  Frontend => React / Redux / Jest
+  Nodejs / Express / https://pokemontcg.io/
+</p>
+<br />
+<h3>
+  Frontend
+</h3>
+<p>  
+  React / Redux / Jest
 </p>
